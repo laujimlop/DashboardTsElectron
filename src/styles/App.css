@@ -1,0 +1,25 @@
+/* hacemos que la página ocupe el 100% del alto de la ventana
+   (si no, el sidebar solo mediría lo que miden sus botones) */
+html, body, #root { 
+    height: 100%; 
+}
+
+/* #root es el contenedor donde React pinta la app
+   flex + column = se aplicará sobre los hijos (cabecera y cuerpo) */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* el cuerpo contiene el sidebar y el panel central display: flex = uno al lado del otro (en fila)
+   flex: 1 = ocupa todo el alto que sobra debajo de la cabecera */
+#cuerpo {
+  display: flex;
+  flex: 1;
+}
+
+/* el panel central flex: 1 = ocupa todo el ancho que sobra al lado del sidebar */
+#panel_central {
+  flex: 1;
+  padding: 0.75rem 2rem 1rem; 
+}

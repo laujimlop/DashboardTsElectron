@@ -1,0 +1,28 @@
+/* botones e inputs de las pantallas del panel central (Personal, Inventario, Incidencias) */
+#panel_central button {
+  padding: 0.6rem 1rem;
+  margin: 0 0.5rem 1rem 0;
+  border-radius: 0.5rem;
+  background: var(--azul);
+  color: var(--naranja-claro);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#panel_central input {
+  padding: 0.6rem 1rem;
+  margin: 0 0.5rem 1rem 0;
+  border: 0.125rem solid var(--azul);
+  border-radius: 0.5rem;
+  background: var(--naranja-claro);
+  font-size: 1rem; 
+}
+
+/* cuando pulsamos el input */
+#panel_central input:focus {
+  outline-color: var(--azul-oscuro);
+}
+
+
+

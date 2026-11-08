@@ -1,0 +1,27 @@
+/* la barra lateral width: ancho fijo
+   flex + column = los botones uno debajo de otro
+   como #cuerpo es flex, el sidebar se estira solo hasta el final de la pantalla */
+#sidebar {
+  width: 13rem;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--azul);
+}
+
+/* los botones del menú, como los <button> llevan fondo por defecto lo modificamos*/
+.boton-menu {
+  padding: 0.875rem 1.5rem;
+  border: none;                    /* quitamos el borde que traen los botones por defecto */
+  background: var(--azul);
+  color: var(--azul-claro);
+  cursor: pointer;                 /* la manita al pasar el ratón */
+  font-size: 1rem;
+  font-weight: bold; 
+}
+
+/* .activo es el de la sección seleccionada. Invertimos colores para destacarlo */
+.activo {
+  background: var(--azul-claro);
+  color: var(--azul-oscuro);
+}

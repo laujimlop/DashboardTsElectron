@@ -1,0 +1,19 @@
+/* VARIABLES: definimos los colores una sola vez y los usamos en todos los archivos con var(--nombre)
+   :root es el elemento raíz de la página, por eso estas variables valen en toda la app */
+:root {
+  --naranja-claro: #F6E2B3;
+  --naranja: #E7A84E;
+  --naranja-oscuro: #D96C2C;
+  --azul-oscuro: #274C56;
+  --azul: #3E8E7E;
+  --azul-claro: #9ec5bd;
+}
+
+/* ESTILO GENERAL de toda la página */
+body {
+  /* quita el margen que trae el navegador por defecto */
+  margin: 0;                            
+  font-family: Arial, sans-serif;
+  background: var(--naranja-claro);
+  color: var(--azul-oscuro);
+}
