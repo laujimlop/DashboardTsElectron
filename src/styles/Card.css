@@ -1,4 +1,4 @@
-/* la tarjeta: una caja blanca con un borde suave */
+/* la tarjeta: una caja naranja con un borde izq */
 .tarjeta {
   padding: 1rem;
   background: var(--naranja);
@@ -6,23 +6,24 @@
   border-left: 0.25rem solid var(--naranja-oscuro); /* detalle de color a la izquierda */
   margin-bottom: 1rem;
 }
-/* les quitamos el margen por defecto que llevan el h3 y el p, generamos ese margen entre ellos*/
+/* les quitamos el margen por defecto que llevan el h3 y el p*/
 .tarjeta h3 {
   margin-top: 0;
+  /*generamos un pequeño margen entre el h3 y el p*/
   margin-bottom: 0.5rem;
 }
 .tarjeta p {
   margin: 0;
 }
 
-/* Solo para el inventario */
+/* Solo para el inventario (ProductCard) */
 .altoValor {
  background-color: var(--naranja-oscuro);
  padding: 0.1rem 0.5rem;
  font-weight: bold;
 }
 
-/* Solo para las tareas */
+/* Solo para las incidencias (taskCard) */
 .tareaPendiente {
   background: var(--naranja-oscuro);
   /* detalle de color a la izquierda */

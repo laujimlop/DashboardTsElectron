@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header.tsx";
-import SidePanel, { type Seccion } from "./components/Sidebar.tsx";
+import Sidebar, { type Seccion } from "./components/Sidebar.tsx";
 
 import Personal from "./views/Personal.tsx";
 import Inventario from "./views/Inventario.tsx";
@@ -15,17 +15,19 @@ function App() {
 
   return (
     <>
-      <div id="App">
-        <Header />
-      </div>
+      
+      <Header />
+      
       <div id="cuerpo">
-        <SidePanel seccion={seccion} setSeccion={setSeccion} />
+        
+        <Sidebar seccion={seccion} setSeccion={setSeccion} />
 
         <main id="panel_central">
           {seccion === "Personal" && <Personal />}
           {seccion === "Inventario" && <Inventario />}
           {seccion === "Incidencias" && <Incidencia />}
         </main>
+
       </div>
     </>
   );

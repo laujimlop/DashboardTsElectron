@@ -9,6 +9,19 @@
   --azul-claro: #9ec5bd;
 }
 
+/* hacemos que la página ocupe el 100% del alto de la ventana
+   (si no, el sidebar solo mediría lo que miden sus botones) */
+html, body, #root { 
+    height: 100%; 
+}
+
+/* #root es el contenedor donde React pinta la app
+   flex + column = se aplicará sobre los hijos (cabecera y cuerpo) */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ESTILO GENERAL de toda la página */
 body {
   /* quita el margen que trae el navegador por defecto */

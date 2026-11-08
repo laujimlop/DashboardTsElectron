@@ -12,10 +12,12 @@
 /* los botones del menú, como los <button> llevan fondo por defecto lo modificamos*/
 .boton-menu {
   padding: 0.875rem 1.5rem;
-  border: none;                    /* quitamos el borde que traen los botones por defecto */
+  /* quitamos el borde que traen los botones por defecto */
+  border: none;                    
   background: var(--azul);
   color: var(--azul-claro);
-  cursor: pointer;                 /* la manita al pasar el ratón */
+  /* la manita al pasar el ratón */
+  cursor: pointer;                 
   font-size: 1rem;
   font-weight: bold; 
 }

@@ -10,8 +10,12 @@ interface Props {
 function ProductCard({ titulo, completada }: Props) {
   return (
     <article className={!completada ? "tarjeta tareaPendiente" : "tarjeta"}>
+
       <h3>{titulo}</h3>
+
+      {/* Que se escriba si esta completada o pendiente */}
       <p>{completada ? "Completada" : "Pendiente"}</p>
+
     </article>
   );
 }

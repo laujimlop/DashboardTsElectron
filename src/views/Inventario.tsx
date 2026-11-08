@@ -22,8 +22,9 @@ function Inventario() {
       const res = await fetch("https://fakestoreapi.com/products?limit=6");
 
       // .json() convierte la respuesta en un array de JavaScript
-      // guardamos ese array en el estado -> React repinta con los productos
+      // guardamos ese array en el estado -> React repinta con los productos de tipo Producto
       setProductos(await res.json());
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -31,7 +32,6 @@ function Inventario() {
     }
   }
 
-  // Esto NO es un estado: es una lista calculada a partir de otros dos estados -> productos y busqueda
   // .filter() se queda solo con los productos que cumplan la condición
   const filtrados = productos.filter((e) =>
     // .includes() es true si el nombre contiene lo que se ha escrito en el buscador.
@@ -56,13 +56,9 @@ function Inventario() {
       {cargando && <p>Cargando datos del servidor…</p>}
 
       {filtrados.map((e) => (
-        <ProductCard
-          key={e.id}
-          titulo={e.title}
-          precio={e.price}
-          descripcion={e.description}
-        />
+        <ProductCard key={e.id} titulo={e.title} precio={e.price} descripcion={e.description} />
       ))}
+
     </section>
   );
 }

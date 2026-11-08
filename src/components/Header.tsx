@@ -18,7 +18,7 @@ function Header() {
     return (
         <header id="cabecera">
             
-            {/* parte izquierda: logo + nombre */}
+            {/* parte izquierda: {logo} + nombre */}
             <div className="marca">
                 <img src={logo} alt="Logo de la empresa" className="logo" />
                 <span className="clarOscuro">ClarOscuro</span>

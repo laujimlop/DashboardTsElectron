@@ -2,7 +2,7 @@ import { useState } from "react";
 import EmployeeCard from "../components/EmployeeCard";
 
 // "interface" describe la FORMA de los datos que devuelve la API
-interface Usuario {
+interface Empleado {
   id: number;
   name: string;
   email: string;
@@ -11,7 +11,7 @@ interface Usuario {
 
 function Personal() {
   // La lista de empleados -> [] (vacía) porque todavía no hemos pulsado el botón
-  const [empleados, setEmpleados] = useState<Usuario[]>([]);
+  const [empleados, setEmpleados] = useState<Empleado[]>([]);
 
   // ¿estamos esperando la respuesta del servidor? false = no, true = sí
   const [cargando, setCargando] = useState(false);
@@ -31,6 +31,7 @@ function Personal() {
       // .json() convierte la respuesta en un array de JavaScript
       // guardamos ese array en el estado -> React repinta con los empleados
       setEmpleados(await res.json());
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -70,14 +71,11 @@ function Personal() {
           - nombre, correo, ciudad: son las PROPS, 
             le mandamos los datos a EmployeeCard desde Personal(la clase padre)         
             Aquí traducimos los nombres de la API (name, email, address.city) a los de nuestra tarjeta. */}
+
       {filtrados.map((e) => (
-        <EmployeeCard
-          key={e.id}
-          nombre={e.name}
-          correo={e.email}
-          ciudad={e.address.city}
-        />
+        <EmployeeCard key={e.id} nombre={e.name} correo={e.email} ciudad={e.address.city} />
       ))}
+
     </section>
   );
 }

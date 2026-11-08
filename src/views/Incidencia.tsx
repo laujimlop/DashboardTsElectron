@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TaskCard from "../components/TaskCard";
 
-// "interface" describe la FORMA de los datos que devuelve la API
+// Interface Tarea describe la FORMA de los datos que devuelve la API
 interface Tarea {
   id: number;
   title: string;
@@ -13,7 +13,9 @@ function Incidencia() {
   const [cargando, setCargando] = useState(false);
   const [busqueda, setBusqueda] = useState("");
 
+
   async function cargar() {
+
     setCargando(true);
 
     try {
@@ -23,8 +25,9 @@ function Incidencia() {
       );
 
       // .json() convierte la respuesta en un array de JavaScript
-      // guardamos ese array en el estado -> React repinta con las tareas
+      // guardamos ese array en el estado -> React repinta con las tareas de tipo Tarea
       setTareas(await res.json());
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -59,6 +62,7 @@ function Incidencia() {
       {filtrados.map((e) => (
         <TaskCard key={e.id} titulo={e.title} completada={e.completed} />
       ))}
+
     </section>
   );
 }
