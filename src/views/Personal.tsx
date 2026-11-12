@@ -28,6 +28,10 @@ function Personal() {
       // fetch hace la petición GET a la API | "await" = espera a que llegue antes de pasar a la siguiente línea
       const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
+      if (!res.ok) {
+        throw new Error(`Error en el servidor: ${res.status}`);
+      }
+
       // .json() convierte la respuesta en un array de JavaScript
       // guardamos ese array en el estado -> React repinta con los empleados
       setEmpleados(await res.json());

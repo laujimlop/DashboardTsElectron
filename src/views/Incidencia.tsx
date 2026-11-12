@@ -24,6 +24,10 @@ function Incidencia() {
         "https://jsonplaceholder.typicode.com/todos?_limit=8",
       );
 
+      if (!res.ok) {
+        throw new Error(`Error en el servidor: ${res.status}`);
+      }
+
       // .json() convierte la respuesta en un array de JavaScript
       // guardamos ese array en el estado -> React repinta con las tareas de tipo Tarea
       setTareas(await res.json());

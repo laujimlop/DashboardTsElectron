@@ -15,11 +15,11 @@ function App() {
 
   return (
     <>
-      
+
       <Header />
-      
+
       <div id="cuerpo">
-        
+
         <Sidebar seccion={seccion} setSeccion={setSeccion} />
 
         <main id="panel_central">

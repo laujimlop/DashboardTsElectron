@@ -10,5 +10,6 @@
 /* el panel central flex: 1 = ocupa todo el ancho que sobra al lado del sidebar */
 #panel_central {
   flex: 1;
+  flex-wrap: wrap; 
   padding: 0.75rem 2rem 1rem; 
 }

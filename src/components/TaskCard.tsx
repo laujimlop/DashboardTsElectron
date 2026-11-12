@@ -7,9 +7,9 @@ interface Props {
 }
 
 // recibimos las props desestructuradas
-function ProductCard({ titulo, completada }: Props) {
+function TaskCard({ titulo, completada }: Props) {
   return (
-    <article className={!completada ? "tarjeta tareaPendiente" : "tarjeta"}>
+    <article className={!completada ? "tarjeta tareaPendiente" : "tarjeta tareaCompletada"}>
 
       <h3>{titulo}</h3>
 
@@ -20,4 +20,4 @@ function ProductCard({ titulo, completada }: Props) {
   );
 }
 
-export default ProductCard;
+export default TaskCard;

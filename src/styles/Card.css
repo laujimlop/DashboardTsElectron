@@ -6,6 +6,7 @@
   border-left: 0.25rem solid var(--naranja-oscuro); /* detalle de color a la izquierda */
   margin-bottom: 1rem;
 }
+
 /* les quitamos el margen por defecto que llevan el h3 y el p*/
 .tarjeta h3 {
   margin-top: 0;

@@ -17,16 +17,16 @@ function Header() {
 
     return (
         <header id="cabecera">
-            
+
             {/* parte izquierda: {logo} + nombre */}
             <div className="marca">
                 <img src={logo} alt="Logo de la empresa" className="logo" />
-                <span className="clarOscuro">ClarOscuro</span>
+                <span className="clarOscuro">clarOscuro</span>
             </div>
 
             {/* parte derecha: la hora, entre llaves porque es una variable de JS */}
             <div className="reloj">{hora}</div>
-            
+
         </header>
     );
 }
